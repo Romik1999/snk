@@ -13,12 +13,9 @@
   }
   @media screen and (max-width: 769px) {
     padding-top: 15px;
-    padding-bottom: 370px;
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-  }
-  @media screen and (max-width: 340px) {
-    padding-bottom: 280px;
   }
 
   &__img {
@@ -173,7 +170,7 @@
       */
       border-radius: 25px;
       padding: 3px;
-      background: linear-gradient(90deg, rgba(197, 239, 0, 1) 0.5%, rgba(223, 223, 223, 1) 50%, rgba(197, 239, 0, 1) 95.5%);
+      background: linear-gradient(90deg, #C5EF00 0%, #DEDFD8 25%, #DFDFDF 75%, #C5EF00 100%);
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;

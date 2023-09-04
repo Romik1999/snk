@@ -12,8 +12,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #202020;
   position: relative;
+  background: url("../img/common/bg.png"), #202020;
 }
 
 section {
@@ -37,7 +37,7 @@ main {
 }
 
 .cont {
-  max-width: 1520px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   position: relative;

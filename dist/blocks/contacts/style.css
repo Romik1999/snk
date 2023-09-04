@@ -29,10 +29,10 @@
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(45deg, #FF9527 0%, #FFBB74 52.09%, #FD9529 100%);
-  background-clip: text;
+  background: url("../img/directions/directions-title.png") no-repeat center/cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #C5EF00;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

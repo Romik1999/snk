@@ -17,7 +17,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background: url("../img/common/bg.png"), #202020;
+  background: url("../img/common/bg.png"), #000000;
 }
 
 section {
@@ -48,6 +48,10 @@ main {
 }
 
 @media screen and (max-width: 1025px) {
+  body {
+    background: url("../img/common/bg-mid.png"), #000000;
+  }
+
   section {
     padding: 75px 20px;
   }

@@ -4,7 +4,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Jura, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   line-height: 120%;
   color: $black;
@@ -16,22 +16,17 @@ body {
   position: relative;
 }
 
-
 section {
-  padding: 100px 30px;
+  padding: 80px 30px;
   box-sizing: border-box;
   position: relative;
 
-  @media screen and (max-width: 1441px) {
-    padding: 85px 20px;
-  }
-
   @media screen and (max-width: 1025px) {
-    padding: 70px 20px;
+    padding: 75px 20px;
   }
 
   @media screen and (max-width: 769px) {
-    padding: 50px 15px;
+    padding: 40px 15px;
   }
 }
 

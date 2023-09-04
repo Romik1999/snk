@@ -3,7 +3,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Jura, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   line-height: 120%;
   color: #000;
@@ -21,7 +21,7 @@ body {
 }
 
 section {
-  padding: 100px 30px;
+  padding: 80px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -47,20 +47,14 @@ main {
   position: relative;
 }
 
-@media screen and (max-width: 1441px) {
-  section {
-    padding: 85px 20px;
-  }
-}
-
 @media screen and (max-width: 1025px) {
   section {
-    padding: 70px 20px;
+    padding: 75px 20px;
   }
 }
 
 @media screen and (max-width: 769px) {
   section {
-    padding: 50px 15px;
+    padding: 40px 15px;
   }
 }

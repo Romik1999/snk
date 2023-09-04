@@ -2,16 +2,17 @@
 
 .hero {
   position: relative;
-  padding-top: 25px;
-  padding-bottom: 400px;
+  padding-top: 35px;
+  padding-bottom: 150px;
 
   @media screen and (max-width: 1441px) {
-    padding-bottom: 350px;
+    padding-bottom: 120px;
   }
   @media screen and (max-width: 1025px) {
-    padding-bottom: 300px;
+    padding-bottom: 85px;
   }
   @media screen and (max-width: 769px) {
+    padding-top: 15px;
     padding-bottom: 370px;
   }
   @media screen and (max-width: 340px) {
@@ -24,8 +25,7 @@
     right: 0;
     z-index: -2;
     width: 100%;
-    height: 85vw;
-    max-height: 1100px;
+    max-height: 1500px;
 
     @media screen and (max-width: 1920px) {
       object-fit: cover;
@@ -45,37 +45,39 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 35px;
 
     @media screen and (max-width: 1441px) {
 
     }
     @media screen and (max-width: 1025px) {
-      row-gap: 80px;
+
     }
     @media screen and (max-width: 769px) {
-      row-gap: 30px;
+      align-items: center;
     }
 
   }
 
   &__logo {
     display: flex;
-    width: 199px;
-    height: 222px;
+    width: 410px;
+    height: 100px;
+    margin-bottom: 130px;
 
     @media screen and (max-width: 1441px) {
-      width: 150px;
-      height: 170px;
+      width: 380px;
+      height: 90px;
+      margin-bottom: 110px;
     }
     @media screen and (max-width: 1025px) {
-      width: 97px;
-      height: 108px;
+      width: 355px;
+      height: 80px;
+      margin-bottom: 90px;
     }
     @media screen and (max-width: 769px) {
-      width: 69px;
-      height: 77px;
+      width: 300px;
+      height: 65px;
+      margin-bottom: 75px;
     }
 
     & img {
@@ -86,23 +88,30 @@
   }
 
   &__title {
-    color: #FFF;
-    text-align: center;
-    text-shadow: 2px 4px 3px #202020;
-    font-family: Raleway, sans-serif;
-    font-size: 65px;
+    background: url('../img/hero/hero-title.png') no-repeat center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #C5EF00;
+    font-family: Raleway;
+    font-size: 80px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+    width: fit-content;
+    margin-bottom: 55px;
 
     @media screen and (max-width: 1441px) {
       font-size: 55px;
+      margin-bottom: 45px;
     }
     @media screen and (max-width: 1025px) {
       font-size: 48px;
+      margin-bottom: 35px;
     }
     @media screen and (max-width: 769px) {
       font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
     }
     @media screen and (max-width: 340px) {
       font-size: 28px;
@@ -111,45 +120,56 @@
 
   &__text {
     border-radius: 25px;
-    background: linear-gradient(45deg, #FF9527 0%, #FFBB74 52.09%, #FD9529 100%);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
-    padding: 11px 25px;
+    padding: 30px 45px;
 
-    max-width: 1006px;
+    max-width: 645px;
     width: 100%;
-    margin: auto;
-
-    color: #202020;
-    text-align: center;
-    font-family: Jura;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
     box-sizing: border-box;
+
+    color: #FFF;
+    font-size: 33px;
+    font-style: normal;
+    line-height: normal;
     position: relative;
 
     @media screen and (max-width: 1441px) {
       font-size: 32px;
     }
     @media screen and (max-width: 1025px) {
+      max-width: 505px;
       font-size: 28px;
+      padding: 30px;
     }
     @media screen and (max-width: 769px) {
       font-size: 20px;
+      padding: 20px 25px;
+      max-width: 450px;
+      text-align: center;
+    }
+    @media screen and (max-width: 340px) {
+      font-size: 16px;
+      padding: 15px;
     }
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      inset: calc(0px - 2px);
+      /*
+      если нет поддержки inset:
+      top: var(--border-w);
+      left: var(--border-w);
+      right: var(--border-w);
+      bottom: var(--border-w);
+      */
       border-radius: 25px;
-      background: linear-gradient(45deg, #FF9527 0%, #FFBB74 52.09%, #FD9529 100%);
-      filter: blur(10px);
+      padding: 3px;
+      background: linear-gradient(90deg, rgba(197, 239, 0, 1) 0.5%, rgba(223, 223, 223, 1) 50%, rgba(197, 239, 0, 1) 95.5%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
     }
   }
 

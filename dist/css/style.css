@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: Raleway;
   font-display: swap;
@@ -15,10 +17,18 @@
 }
 
 @font-face {
-  font-family: Jura;
+  font-family: Raleway;
   font-display: swap;
-  src: url("../fonts/Jura-Bold.woff2") format("woff2"), url("../fonts/Jura-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -27,7 +37,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Jura, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   line-height: 120%;
   color: #000;
@@ -45,7 +55,7 @@ body {
 }
 
 section {
-  padding: 100px 30px;
+  padding: 80px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -73,8 +83,8 @@ main {
 
 .hero {
   position: relative;
-  padding-top: 25px;
-  padding-bottom: 400px;
+  padding-top: 35px;
+  padding-bottom: 150px;
 }
 
 .hero__img {
@@ -83,8 +93,7 @@ main {
   right: 0;
   z-index: -2;
   width: 100%;
-  height: 85vw;
-  max-height: 1100px;
+  max-height: 1500px;
 }
 
 .hero__wrapper {
@@ -95,18 +104,15 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  row-gap: 35px;
 }
 
 .hero__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 199px;
-  height: 222px;
+  width: 410px;
+  height: 100px;
+  margin-bottom: 130px;
 }
 
 .hero__logo img {
@@ -117,53 +123,72 @@ main {
 }
 
 .hero__title {
-  color: #FFF;
-  text-align: center;
-  text-shadow: 2px 4px 3px #202020;
-  font-family: Raleway, sans-serif;
-  font-size: 65px;
+  background: url("../img/hero/hero-title.png") no-repeat center/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #C5EF00;
+  font-family: Raleway;
+  font-size: 80px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 55px;
 }
 
 .hero__text {
   border-radius: 25px;
-  background: linear-gradient(45deg, #FF9527 0%, #FFBB74 52.09%, #FD9529 100%);
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-  padding: 11px 25px;
-  max-width: 1006px;
+  padding: 30px 45px;
+  max-width: 645px;
   width: 100%;
-  margin: auto;
-  color: #202020;
-  text-align: center;
-  font-family: Jura;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #FFF;
+  font-size: 33px;
+  font-style: normal;
+  line-height: normal;
   position: relative;
 }
 
 .hero__text:after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  inset: -2px;
+  /*
+  если нет поддержки inset:
+  top: var(--border-w);
+  left: var(--border-w);
+  right: var(--border-w);
+  bottom: var(--border-w);
+  */
   border-radius: 25px;
-  background: linear-gradient(45deg, #FF9527 0%, #FFBB74 52.09%, #FD9529 100%);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  padding: 3px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.5%, rgb(197, 239, 0)), color-stop(50%, rgb(223, 223, 223)), color-stop(95.5%, rgb(197, 239, 0)));
+  background: linear-gradient(90deg, rgb(197, 239, 0) 0.5%, rgb(223, 223, 223) 50%, rgb(197, 239, 0) 95.5%);
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .contacts {
   position: relative;
+  padding-bottom: 130px;
+}
+
+.contacts__img {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: -1;
+  max-width: 800px;
+  width: 42%;
 }
 
 .contacts__wrapper {
@@ -456,12 +481,8 @@ main {
 }
 
 @media screen and (max-width: 1441px) {
-  section {
-    padding: 85px 20px;
-  }
-
   .hero {
-    padding-bottom: 350px;
+    padding-bottom: 120px;
   }
 
   .hero__img {
@@ -469,16 +490,26 @@ main {
   }
 
   .hero__logo {
-    width: 150px;
-    height: 170px;
+    width: 380px;
+    height: 90px;
+    margin-bottom: 110px;
   }
 
   .hero__title {
     font-size: 55px;
+    margin-bottom: 45px;
   }
 
   .hero__text {
     font-size: 32px;
+  }
+
+  .contacts-item__title {
+    font-size: 32px;
+  }
+
+  .contacts-item__title--small {
+    font-size: 16px;
   }
 
   .partners__title {
@@ -504,11 +535,11 @@ main {
 
 @media screen and (max-width: 1025px) {
   section {
-    padding: 70px 20px;
+    padding: 75px 20px;
   }
 
   .hero {
-    padding-bottom: 300px;
+    padding-bottom: 85px;
   }
 
   .hero__img {
@@ -517,29 +548,33 @@ main {
        object-fit: cover;
   }
 
-  .hero__wrapper {
-    row-gap: 80px;
-  }
-
   .hero__logo {
-    width: 97px;
-    height: 108px;
+    width: 355px;
+    height: 80px;
+    margin-bottom: 90px;
   }
 
   .hero__title {
     font-size: 48px;
+    margin-bottom: 35px;
   }
 
   .hero__text {
+    max-width: 505px;
     font-size: 28px;
+    padding: 30px;
+  }
+
+  .contacts {
+    padding-bottom: 100px;
+  }
+
+  .contacts__img {
+    width: 50%;
   }
 
   .contacts__wrapper {
     row-gap: 50px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-bottom: 400px;
   }
 
   .contacts__title {
@@ -549,10 +584,15 @@ main {
 
   .contacts__items {
     width: 100%;
+    max-width: 655px;
   }
 
   .contacts-item__title {
     font-size: 28px;
+  }
+
+  .contacts-item__title--small {
+    font-size: 16px;
   }
 
   .partners__wrapper {
@@ -627,10 +667,11 @@ main {
 
 @media screen and (max-width: 769px) {
   section {
-    padding: 50px 15px;
+    padding: 40px 15px;
   }
 
   .hero {
+    padding-top: 15px;
     padding-bottom: 370px;
   }
 
@@ -639,32 +680,52 @@ main {
   }
 
   .hero__wrapper {
-    row-gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .hero__logo {
-    width: 69px;
-    height: 77px;
+    width: 300px;
+    height: 65px;
+    margin-bottom: 75px;
   }
 
   .hero__title {
     font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .hero__text {
     font-size: 20px;
+    padding: 20px 25px;
+    max-width: 450px;
+    text-align: center;
   }
 
   .contacts {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 0;
+    padding-bottom: 300px;
+    overflow: hidden;
+  }
+
+  .contacts__img {
+    width: auto;
+    max-width: 500px;
+    bottom: -20px;
+    max-height: 320px;
+    height: 100%;
   }
 
   .contacts__wrapper {
     row-gap: 35px;
     padding-bottom: 0;
     padding: 0 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .contacts__items {
@@ -688,6 +749,10 @@ main {
   .contacts-item__title {
     font-size: 22px;
     text-align: center;
+  }
+
+  .contacts-item__title--small {
+    font-size: 16px;
   }
 
   .partners__wrapper {
@@ -761,8 +826,17 @@ main {
     font-size: 28px;
   }
 
+  .hero__text {
+    font-size: 16px;
+    padding: 15px;
+  }
+
   .hero {
     max-width: 100%;
+  }
+
+  .contacts__img {
+    max-height: 280px;
   }
 
   .contacts-item__title {

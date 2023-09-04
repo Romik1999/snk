@@ -15,6 +15,10 @@
   max-height: 1500px;
 }
 
+.hero__img img {
+  width: 100%;
+}
+
 .hero__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,16 +165,20 @@
   .hero {
     padding-top: 15px;
     padding-bottom: 370px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .hero__img {
-    height: 640px;
+    height: 340px;
+    position: unset;
   }
 
   .hero__wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0 15px;
   }
 
   .hero__logo {

@@ -13,10 +13,13 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: url("../img/common/bg.png"), #000000;
+  background: url("../img/hero/hero-bg-big.png") no-repeat center/cover, #000000;
 
   @media screen and (max-width: 1025px) {
-    background: url("../img/common/bg-mid.png"), #000000;
+    background: url("../img/hero/hero-bg-mid.png") no-repeat center/cover, #000000;
+  }
+  @media screen and (max-width: 769px) {
+    background: url("../img/hero/hero-bg-sm.png") no-repeat center/cover, #000000;
   }
 }
 

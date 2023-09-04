@@ -51,7 +51,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background: url("../img/common/bg.png"), #000000;
+  background: url("../img/hero/hero-bg-big.png") no-repeat center/cover, #000000;
 }
 
 section {
@@ -88,16 +88,7 @@ main {
 }
 
 .hero__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -2;
-  width: 100%;
-  max-height: 1500px;
-}
-
-.hero__img img {
-  width: 100%;
+  display: none;
 }
 
 .hero__wrapper {
@@ -580,20 +571,9 @@ main {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1920px) {
-  .hero__img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-
 @media screen and (max-width: 1441px) {
   .hero {
     padding-bottom: 120px;
-  }
-
-  .hero__img {
-    max-height: 930px;
   }
 
   .hero__logo {
@@ -698,7 +678,7 @@ main {
 
 @media screen and (max-width: 1025px) {
   body {
-    background: url("../img/common/bg-mid.png"), #000000;
+    background: url("../img/hero/hero-bg-mid.png") no-repeat center/cover, #000000;
   }
 
   section {
@@ -707,12 +687,6 @@ main {
 
   .hero {
     padding-bottom: 85px;
-  }
-
-  .hero__img {
-    max-height: 831px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 
   .hero__logo {
@@ -827,6 +801,10 @@ main {
 }
 
 @media screen and (max-width: 769px) {
+  body {
+    background: url("../img/hero/hero-bg-sm.png") no-repeat center/cover, #000000;
+  }
+
   section {
     padding: 40px 15px;
   }
@@ -839,8 +817,12 @@ main {
   }
 
   .hero__img {
-    height: 340px;
-    position: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .hero__wrapper {

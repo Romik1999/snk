@@ -1,0 +1,71 @@
+@import "./colors";
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Jura, sans-serif;
+  font-size: 20px;
+  line-height: 120%;
+  color: $black;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #202020;
+  position: relative;
+}
+
+
+section {
+  padding: 100px 30px;
+  box-sizing: border-box;
+  position: relative;
+
+  @media screen and (max-width: 1441px) {
+    padding: 85px 20px;
+  }
+
+  @media screen and (max-width: 1025px) {
+    padding: 70px 20px;
+  }
+
+  @media screen and (max-width: 769px) {
+    padding: 50px 15px;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 1001px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 769px) {
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 350px) {
+}

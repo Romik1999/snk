@@ -20,7 +20,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 60px;
+  gap: 60px 0;
 }
 
 .contacts__title {
@@ -112,7 +112,7 @@
   }
 
   .contacts__wrapper {
-    row-gap: 50px;
+    gap: 50px 0;
   }
 
   .contacts__title {
@@ -151,7 +151,7 @@
   }
 
   .contacts__wrapper {
-    row-gap: 35px;
+    gap: 35px 0;
     padding-bottom: 0;
     padding: 0 15px;
     -webkit-box-align: center;

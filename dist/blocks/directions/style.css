@@ -202,6 +202,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-left: 0;
   }
 
   .directions__item:nth-child(2) {

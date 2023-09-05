@@ -76,25 +76,25 @@
   &__items {
     display: flex;
     flex-direction: column;
-    row-gap: 35px;
+    gap: 35px 0;
 
     @media screen and (max-width: 1025px) {
       width: 100%;
       max-width: 655px;
     }
     @media screen and (max-width: 769px) {
-      row-gap: 35px;
+      gap: 35px 0;
     }
   }
 
   &-item {
     display: flex;
-    column-gap: 30px;
+    gap: 0 30px;
     align-items: center;
 
     @media screen and (max-width: 769px) {
       flex-direction: column;
-      row-gap: 15px;
+      gap: 15px 0;
     }
 
     &__icon {
